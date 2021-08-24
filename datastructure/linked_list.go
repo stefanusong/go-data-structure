@@ -1,4 +1,4 @@
-package main
+package datastructure
 
 import "fmt"
 
@@ -167,7 +167,7 @@ func (list LinkedList) simulateOperation(items []int, totalItem int) {
 	fmt.Println("FINISHED")
 }
 
-func main() {
+func RunLinkedList() {
 	linkedList := &LinkedList{}
 	items := []int{13, 12, 16, 15, 8, 14, 11, 18}
 	totalItem := len(items)
