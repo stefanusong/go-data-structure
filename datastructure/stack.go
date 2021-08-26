@@ -1,5 +1,0 @@
-package datastructure
-
-func RunStack() {
-		
-}

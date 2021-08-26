@@ -1,11 +1,10 @@
 package main
 
 import (
-	ds "go-data-structure/datastructure"
+	"github.com/stefanusong/go-data-structure/datastructure/linkedlist"
 )
 
 func main() {
 	//Call the data structure function you wanna run here
-	ds.RunLinkedList()
-	ds.RunStack()
+	linkedlist.Run()
 }
