@@ -14,30 +14,10 @@ type BST struct {
 
 func createNode(value int) *Node {
 	newNode := &Node{value, nil, nil}
-	// if bst.root == nil {
-	// 	bst.root = newNode
-	// } else {
-	// 	insertNode(bst.root, newNode)
-	// }
 	return newNode
 }
 
 func insertNode(root *Node, value int) *Node {
-	// if newNode.value < root.value {
-	// 	// Insert to left child if not exists
-	// 	if root.left == nil {
-	// 		root.left = newNode
-	// 	} else { // else recursively check the left subtree
-	// 		insertNode(root.left, newNode)
-	// 	}
-	// } else {
-	// 	// Insert to right child if not exists
-	// 	if root.left == nil {
-	// 		root.left = newNode
-	// 	} else { // else recursively check the right subtree
-	// 		insertNode(root.left, newNode)
-	// 	}
-	// }
 	if root == nil {
 		return createNode(value)
 	} else if value < root.value {
@@ -67,10 +47,12 @@ func removeNode(root *Node, value int) *Node {
 			} else {
 				replacingNode = root.right
 			}
+
 			root.left = nil
 			root.right = nil
 			root = nil
 			return replacingNode
+			
 		} else { // If this node has 2 child
 			newRoot := Predecessor(root)
 			root.value = newRoot.value
